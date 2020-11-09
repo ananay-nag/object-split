@@ -7,12 +7,12 @@
 
 # Versions-
 
-`@ananay-nag/object-split` has released version `1.0.0`.
+`@ananay-nag/object-split` has released version `1.0.2`.
 
-It is still able to use v1 with `@ananay-nag/object-split@1.0.0`
+It is still able to use v1 with `@ananay-nag/object-split@1.0.2`
 
 ```js
-// v1.0.0
+// v1.0.2
 const splitObject = require("@ananay-nag/object-split");
 ```
 
