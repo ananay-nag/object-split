@@ -1,6 +1,6 @@
 {
   "name": "@ananay-nag/object-split",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "split any object by key name, by length.",
   "main": "index.js",
   "scripts": {
