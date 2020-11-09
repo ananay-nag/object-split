@@ -31,31 +31,30 @@ npm i --save @ananay-nag/object-split
 ### example -
 
 ```js
-const splitObject = require("@ananay-nag/object-split");
-//or
-import splitObject from "@ananay-nag/object-split";
+const { splitObject } = require("./index");
 
 let object = { A: "A", B: "B", C: "C", D: "D", E: "E" };
 
 let options = [
   [1, 3],
-  [2, 9],
+  [2, 4],
   [4, 5],
 ];
 
 try {
   console.log("By Name");
-  console.log(new splitObject(object).byLength(options));
+  console.log(splitObject.byLength(object, options));
   console.log("By KeyName");
-  console.log(new splitObject(object).byKeyName("D"));
+  console.log(splitObject.byKeyName(object, "D"));
 } catch (err) {
   console.log("err" + err);
 }
+
 /*
 By Name
 [
   [ { B: 'B' }, { C: 'C' } ],
-  [ { C: 'C' }, { D: 'D' }, { E: 'E' } ],
+  [ { C: 'C' }, { D: 'D' } ],
   [ { E: 'E' } ]
 ]
 By KeyName
