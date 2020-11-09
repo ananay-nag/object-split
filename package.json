@@ -1,0 +1,32 @@
+{
+  "name": "@ananay-nag/object-split",
+  "version": "1.0.0",
+  "description": "split any object by key name, by length.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ananay-nag/object-split.git"
+  },
+  "keywords": [
+    "split",
+    "split object",
+    "object devide",
+    "parts object",
+    "objects"
+  ],
+  "author": "ANANYA-NAG",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ananay-nag/object-split/issues"
+  },
+  "homepage": "https://github.com/ananay-nag/object-split#readme",
+  "directories": {
+    "lib": "lib"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  }
+}
