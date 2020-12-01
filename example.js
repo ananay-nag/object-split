@@ -5,11 +5,14 @@ let options = [
   [2, 4],
   [4, 5],
 ];
+
+let isMerge = true;
+
 try {
-  console.log("By Name");
-  console.log(splitObject.byLength(object, options));
+  console.log("By Length");
+  console.log(splitObject.byLength(object));
   console.log("By KeyName");
-  console.log(splitObject.byKeyName(object, "D"));
+  console.log(splitObject.byKeyName(object, "D", isMerge));
 } catch (err) {
   console.log("err" + err);
 }

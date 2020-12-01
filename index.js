@@ -8,18 +8,18 @@ const splitObject = {
   byLength,
   byKeyName,
 };
-function byLength(object, options) {
+function byLength(object, options, isMerge) {
   if (!utility.isObject(object)) throw new CustomError(400, "Not a valid object parameter.", "InvalidParam");
   this.object = object;
   if (utility.checkByLengthParam(options)) {
-    return lib.startSplitByLength(this.object, options);
+    return lib.startSplitByLength(this.object, options, isMerge);
   }
 }
-function byKeyName(object, options) {
+function byKeyName(object, options, isMerge) {
   if (!utility.isObject(object)) throw new CustomError(400, "Not a valid object parameter.", "InvalidParam");
   this.object = object;
   if (utility.checkByKeyNameParam(options)) {
-    return lib.startSplitByKeyName(this.object, options);
+    return lib.startSplitByKeyName(this.object, options, isMerge);
   }
 }
 module.exports.splitObject = splitObject;

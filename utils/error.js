@@ -16,4 +16,4 @@ class CustomError {
 
 inherits(CustomError, Error);
 
-// export default CustomError;
+module.exports.CustomError = CustomError;

@@ -7,13 +7,16 @@
 
 # Versions-
 
-`@ananay-nag/object-split` has released version `1.0.4`.
+`@ananay-nag/object-split` has released version `1.0.5`.
 
-It is still able to use v1 with `@ananay-nag/object-split@1.0.4`
+### v1.0.5 Feature -
+  - In new feature you can combine the all object key in to single object.
+
+It is still able to use v1 with `@ananay-nag/object-split@1.0.5`
 
 ```js
-// v1.0.4
-const splitObject = require("@ananay-nag/object-split");
+// v1.0.5
+const {splitObject} = require("@ananay-nag/object-split");
 ```
 
 # Quick Start
@@ -31,7 +34,7 @@ npm i --save @ananay-nag/object-split
 ### example -
 
 ```js
-const { splitObject } = require("./index");
+const {splitObject} = require("@ananay-nag/object-split");
 
 let object = { A: "A", B: "B", C: "C", D: "D", E: "E" };
 
@@ -47,7 +50,7 @@ try {
   console.log("By KeyName");
   console.log(splitObject.byKeyName(object, "D"));
 } catch (err) {
-  console.log("err" + err);
+  console.log("err " + err);
 }
 
 /*
@@ -62,3 +65,34 @@ By KeyName
 */
 ```
 
+### example -
+
+```js
+const {splitObject} = require("@ananay-nag/object-split");
+
+let object = { A: "A", B: "B", C: "C", D: "D", E: "E" };
+
+let options = [
+  [1, 3],
+  [2, 4],
+  [4, 5],
+];
+
+let isMerge = true; // optional for combine the object keys.
+
+try {
+  console.log("By Length");
+  console.log(splitObject.byLength(object, options, isMerge));
+  console.log("By KeyName");
+  console.log(splitObject.byKeyName(object, "D", isMerge));
+} catch (err) {
+  console.log("err " + err);
+}
+
+/*
+By Length
+[ { B: 'B', C: 'C' }, { C: 'C', D: 'D' }, { E: 'E' } ]
+By KeyName
+[ { A: 'A', B: 'B', C: 'C' }, { D: 'D', E: 'E' } ]
+*/
+```
