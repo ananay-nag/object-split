@@ -10,9 +10,9 @@ let isMerge = true;
 
 try {
   console.log("By Length");
-  console.log(splitObject.byLength(object));
+  console.log(splitObject.byLength(object,options,isMerge));
   console.log("By KeyName");
-  console.log(splitObject.byKeyName(object, "D", isMerge));
+  console.log(splitObject.byKeyName(object, "B", isMerge));
 } catch (err) {
-  console.log("err" + err);
+  console.log("err " + err);
 }

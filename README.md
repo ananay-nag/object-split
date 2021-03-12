@@ -7,15 +7,15 @@
 
 # Versions-
 
-`@ananay-nag/object-split` has released version `1.0.5`.
+`@ananay-nag/object-split` has released version `1.0.6`.
 
-### v1.0.5 Feature -
+### v1.0.6 Feature -
   - In new feature you can combine the all object key in to single object.
 
-It is still able to use v1 with `@ananay-nag/object-split@1.0.5`
+It is still able to use v1 with `@ananay-nag/object-split@1.0.6`
 
 ```js
-// v1.0.5
+// v1.0.6
 const {splitObject} = require("@ananay-nag/object-split");
 ```
 
@@ -45,7 +45,7 @@ let options = [
 ];
 
 try {
-  console.log("By Name");
+  console.log("By Length");
   console.log(splitObject.byLength(object, options));
   console.log("By KeyName");
   console.log(splitObject.byKeyName(object, "D"));
@@ -54,7 +54,7 @@ try {
 }
 
 /*
-By Name
+By Length
 [
   [ { B: 'B' }, { C: 'C' } ],
   [ { C: 'C' }, { D: 'D' } ],
